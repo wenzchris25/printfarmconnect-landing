@@ -1,0 +1,32 @@
+export default {
+  async fetch(request) {
+    const html = `
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Print Farm Connect | Coming Soon</title>
+      <style>
+        body { font-family: sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; background: #0f172a; color: white; text-align: center; }
+        .container { padding: 20px; }
+        h1 { font-size: 3rem; margin-bottom: 10px; color: #38bdf8; }
+        p { font-size: 1.2rem; color: #94a3b8; }
+        .badge { background: #1e293b; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; border: 1px solid #334155; }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <div class="badge">In Development</div>
+        <h1>Print Farm Connect</h1>
+        <p>Connecting Makers with the World's Best Print Farms.</p>
+        <p><strong>Launching 2026</strong></p>
+      </div>
+    </body>
+    </html>`;
+
+    return new Response(html, {
+      headers: { "content-type": "text/html;charset=UTF-8" },
+    });
+  },
+};
